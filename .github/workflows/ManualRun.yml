@@ -5,7 +5,7 @@ name: CICD
 # Manual click on workflows whenever needs
 
 on: 
-  workflow: dispatch
+  workflow_dispatch
 
 jobs:
   code:
