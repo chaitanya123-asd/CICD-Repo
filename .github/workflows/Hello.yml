@@ -7,7 +7,7 @@ on:
       - main
 
     paths: 
-       -'**.html'
+      -'**.html'
 
 # Jobs
 jobs:
