@@ -16,6 +16,7 @@ jobs:
 
 
   build:
+    needs: [code]
     runs-on: ubuntu-latest
     steps:
        - name: Buid docker container
@@ -23,12 +24,14 @@ jobs:
 
 
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
        - name: test the container
          run: echo "testing container"
 
   deploy:
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
      - name: deploying app
